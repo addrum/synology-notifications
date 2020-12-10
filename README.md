@@ -6,7 +6,7 @@ Inspired by https://github.com/ryancurrah/synology-notifications
 Supports:
 1. Discord
 
-## Setup
+## Setup for Synology
 1. Add this repo via Docker
 1. Add a `WEBHOOK_URL` environment variable and set it to your service's url.
     1. For discord, you can find this in `Edit channel->Integrations->Webhooks->WebhookName->Copy webhook URL`
