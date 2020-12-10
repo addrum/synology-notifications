@@ -19,7 +19,7 @@ Supports:
     1. Add `phone_number` parameter; leave the `value` field empty
     1. Add `message` parameter; enter `hello world` as the value
 1. Set the `phone_number` parameter category to `Phone number`
-1. Set the `message` parameter category to `Messagee content`
+1. Set the `message` parameter category to `Message content`
 1. Set the `SMS Service provider` to your newly created service
 1. Enter in a dummy phone number (it's not used)
 1. Hit apply
