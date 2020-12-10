@@ -12,7 +12,7 @@ Supports:
     1. For discord, you can find this in `Edit channel->Integrations->Webhooks->WebhookName->Copy webhook URL`
     1. You can optionally add a `USERNAME` environment variable to override the webhook's name (Discord only)
 1. Add a new SMS provider in `Control Panel`
-1. Enter your Synology ip followed by the port you've assigned the Docker contained too as the `URL`. e.g. `https://<your-ip>:8686`
+1. Enter your Synology ip followed by the port you've assigned the Docker contained too as the `URL`. e.g. `https://<your-synology-ip>:8686`
 1. Set `HTTP Method` to `POST`
 1. Currently can hit next on `Edit HTTP Request Header` - future notification endpoints may require things like an API key here
 1. On `Edit HTTP Request Body`:
