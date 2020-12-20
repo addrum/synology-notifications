@@ -10,8 +10,29 @@ from gevent.pywsgi import WSGIServer
 
 app = Flask(__name__)
 
+def send(data):
+    payload = {
+        "content": data,
+        "username": username
+    }
+
+    print(payload)
+
+    response = requests.post(url, data=payload)
+
+    print(f'response {response.reason}, {response.status_code}')
+
+    return response.reason, response.status_code
+
+@app.route('/', methods = ['GET'])
+def home_get():
+    body = request.args.get('text')
+    print(f'text {body}')
+
+    return send(body)
+
 @app.route('/', methods = ['POST'])
-def home():
+def home_post():
     body = request.data
     if not body:
         return 'bad request', 400
@@ -24,18 +45,7 @@ def home():
     except:
         return 'body not json', 400
 
-    payload = {
-        "content": synology_message,
-        "username": username
-    }
-
-    print(payload)
-
-    response = requests.post(url, data=payload)
-
-    print(f'response {response.reason}, {response.status_code}')
-
-    return response.reason, response.status_code
+    return send(synology_message)
 
 if __name__ == '__main__':
     url = os.getenv('WEBHOOK_URL', None)
