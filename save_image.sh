@@ -1,1 +1,1 @@
-docker save synology-notifications:latest | gzip > synology-notifications.tar.gz
+docker save addrum/synology-notifications:latest | gzip > synology-notifications.tar.gz
