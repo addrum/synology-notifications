@@ -32,8 +32,8 @@ Supports:
 1. Enter your Synology ip followed by the port you've assigned the Docker container to as the `URL`. e.g. `http://<your-synology-ip>:8686`
 1. This time you'll also need to add some url parameters; the value of these parameters don't matter they're just required by Surveillance Station: e.g. 'http://your-synology-ip:8686?user=na&password=na&api_id=na&to=na&text=hello+world'
 1. Set `HTTP Method` to `GET`
-1. Set the 'user' parameter category to 'Username'
-1. Set the 'password' parameter category to 'Password'
+1. Set the `user` parameter category to `Username`
+1. Set the `password` parameter category to `Password`
 1. Set the `to` parameter category to `Phone number`
 1. Set the `text` parameter category to `Message content`
 1. Set the `SMS Service provider` to your newly created service
