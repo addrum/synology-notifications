@@ -40,7 +40,12 @@ def home_post():
     print(f'json {body}')
 
     try:
-        synology_message = json.loads(body)['message']
+        # using str instead of json.loads() because Synology messages can be invalid json
+        # this could be much improved
+        body_cleaned = str(body).split(':')[2].split('"')[1]
+        # strip final newline if there is one
+        body_cleaned = body_cleaned.split("\\r")[0]
+        synology_message = body_cleaned
         print(f'synology_message {synology_message}')
     except:
         return 'body not json', 400
