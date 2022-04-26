@@ -1,0 +1,7 @@
+services:
+  synology-notifications:
+    image: addrum/synology-notifications:latest
+    environment:
+      - WEBHOOK_URL
+    ports:
+      - 8686:8686
